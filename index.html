@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>터치 카트</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="menu-screen" id="menuScreen" aria-label="터치 카트 메인 화면"></section>
+
+    <main class="game-shell screen-hidden" id="gameShell">
+      <section class="playfield" aria-label="레이싱 경기장">
+        <header class="race-header">
+          <div class="brand">
+            <p id="selectionInfo">코스 선택 전</p>
+            <h1>터치 카트</h1>
+          </div>
+
+          <section class="race-control" aria-label="경기 상태">
+            <div class="status-row">
+              <div>
+                <span>해결 문제</span>
+                <strong id="roundNumber">0</strong>
+              </div>
+              <div>
+                <span>선두</span>
+                <strong id="leaderName">동점</strong>
+              </div>
+            </div>
+            <p class="message-line" id="messageLine">학년과 단원을 고른 뒤 레이스를 시작하세요.</p>
+          </section>
+
+          <section class="teacher-tools" aria-label="교사용 조작">
+            <button id="startButton" class="teacher-primary" type="button">문제 시작</button>
+            <button id="nextButton" type="button">다음 문제</button>
+            <button id="revealButton" type="button">정답</button>
+            <button id="resetButton" type="button">리셋</button>
+            <button id="courseButton" type="button">코스 선택</button>
+          </section>
+        </header>
+
+        <section class="arena" aria-label="학생별 레이스 진행 상황">
+          <div class="arena-scenery" aria-hidden="true">
+            <div class="crowd-row"></div>
+            <div class="score-banner">
+              <span>레이싱카</span>
+              <strong>TOUCH BATTLE</strong>
+            </div>
+            <div class="stadium-lights"></div>
+          </div>
+          <div class="finish-line" aria-hidden="true">FINISH</div>
+          <div id="raceLanes" class="race-lanes"></div>
+        </section>
+      </section>
+
+      <section class="keypad-zone" aria-label="학생 정답 입력">
+        <div id="playersGrid" class="players-grid"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
